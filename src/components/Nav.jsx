@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import donkey from '../images/donkey-logo.svg'
 import NavLogin from './Nav-Login';
 
-function Nav(location) {
+function Nav() {
     return (
         <StyledNav>
             <StyledNavContainer>
@@ -21,17 +21,18 @@ function Nav(location) {
 }
 
 const StyledNav = styled.nav`
-    padding: 1rem 0;
+    padding: 0rem 3rem;
     width: 100vw;
+    min-height: 10vh;
     display: flex;
     justify-content: center;
     box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.05);
 `
 
 const StyledNavContainer = styled.div`
-    max-width: 100vw;
+    max-width: 1400px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-grow: 1;
 `
 

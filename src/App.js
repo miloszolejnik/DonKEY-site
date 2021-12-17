@@ -1,15 +1,15 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
 import Nav from './components/Nav'
 import Main from './components/Main'
+import Footer from './components/Footer'
 
 export default function App() {
 
-    const location = useLocation();
     return (
         <div>
-            <Nav location={location} />
+            <Nav />
             <Main />
+            <Footer />
         </div>
     )
 }
