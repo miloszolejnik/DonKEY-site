@@ -5,6 +5,7 @@ import { Formik } from 'formik'
 import * as Yup from 'yup';
 
 import Login from '../components/Login'
+import { LoginAPI } from '../services/API'
 
 function HomePage() {
 
@@ -18,7 +19,7 @@ function HomePage() {
 
     //OnSubmit
     const onSubmit = value => {
-        alert(value.email, value.password);
+        LoginAPI(value.email, value.password);
     };
 
     //Form Validation by Yup
