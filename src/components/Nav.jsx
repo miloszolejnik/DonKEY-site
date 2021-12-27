@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import styled from 'styled-components'
 import donkey from '../images/donkey-logo.svg'
 import NavLogin from './Nav-Login';
@@ -8,7 +8,7 @@ function Nav() {
     return (
         <StyledNav>
             <StyledNavContainer>
-                <StyledLogin>
+                <StyledLogin to="/">
                     <img src={donkey} alt="DonKEY logo" />
                     <h1>DonKey</h1>
                 </StyledLogin>
@@ -36,7 +36,9 @@ const StyledNavContainer = styled.div`
     flex-grow: 1;
 `
 
-const StyledLogin = styled.div`
+const StyledLogin = styled(Link)`
+    text-decoration: none;
+    color: black;
     display: flex;
     align-items: center;
 `
