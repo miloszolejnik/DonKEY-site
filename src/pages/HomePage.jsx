@@ -24,11 +24,11 @@ function HomePage() {
 
     //Form Validation by Yup
     const validationSchema = Yup.object({
-        email: Yup.string().
-            required('Field is required').
-            email('Invalid email format'),
-        password: Yup.string().
-            required('Field is required'),
+        email: Yup.string()
+            .required('Field is required')
+            .email('Invalid email format'),
+        password: Yup.string()
+            .required('Field is required'),
     })
 
     return (
