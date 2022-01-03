@@ -4,10 +4,10 @@ import MainPage from '../pages/MainPage';
 
 function Main() {
 
-    const loginToken = sessionStorage.getItem('loginToken');
     return (
         <div>
-            {loginToken ? <MainPage /> : <HomePage />}
+            {/* <HomePage /> */}
+            <MainPage />
         </div>
     )
 }

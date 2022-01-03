@@ -4,12 +4,14 @@ import { useLocation } from 'react-router-dom'
 import { Formik } from 'formik'
 import * as Yup from 'yup';
 
-import Login from '../components/Login'
-import { LoginAPI } from '../services/API'
+import { useDispatch } from 'react-redux';
+import { loginAction } from '../actions/loginAction';
 
+import Login from '../components/Login'
 function HomePage() {
 
     const location = useLocation().pathname;
+    const dispatch = useDispatch();
 
     //Initial Form Values
     const initialValues = {
@@ -19,16 +21,16 @@ function HomePage() {
 
     //OnSubmit
     const onSubmit = value => {
-        LoginAPI(value.email, value.password);
+        dispatch(loginAction(value.email, value.password))
     };
 
     //Form Validation by Yup
     const validationSchema = Yup.object({
-        email: Yup.string().
-            required('Field is required').
-            email('Invalid email format'),
-        password: Yup.string().
-            required('Field is required'),
+        email: Yup.string()
+            .required('Field is required')
+            .email('Invalid email format'),
+        password: Yup.string()
+            .required('Field is required'),
     })
 
     return (

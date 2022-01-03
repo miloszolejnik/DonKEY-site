@@ -1,9 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 
 function MainPage() {
+
     return (
         <div>
-            <h1>Hello Logged boy</h1>
+            <select name="" id="">
+
+            </select>
         </div>
     )
 }

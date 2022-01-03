@@ -1,14 +1,29 @@
 import axios from 'axios'
 
-export const LoginAPI = (login, password) => {
+const standardURL = "https://dev-donkey-api.herokuapp.com/api/"
+
+// export const loginURL = standardURL + 'Accounts/login';
+// export const getBlogsURL = standardURL + 'Blogs';
+
+const token = sessionStorage.getItem('loginToken');
+// export const LoginAPI = (login, password) => {
+//     axios({
+//         method: 'post',
+//         url: standardURL + 'Accounts/login',
+//         data: {
+//             "email": login,
+//             "password": password
+//         }
+//     })
+// }
+export const getBlogsApi = () => {
     axios({
-        method: 'post',
-        url: 'https://dev-donkey-api.herokuapp.com/api/Accounts/login',
-        data: {
-            "email": login,
-            "password": password
+        method: 'get',
+        url: standardURL + 'Blogs',
+        headers: {
+            Authorization: 'bearer ' + token
         }
     }).then(data => {
-        sessionStorage.setItem('loginToken', data.data.token);
+        return data;
     }).catch(err => console.log(err))
 }
