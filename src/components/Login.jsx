@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Form, Field, ErrorMessage } from 'formik'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 import TextError from '../components/TextError';
 

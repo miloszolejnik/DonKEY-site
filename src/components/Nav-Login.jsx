@@ -3,10 +3,15 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 function NavLogin() {
+
+    const loginToken = sessionStorage.getItem('loginToken');
+
+    const logOut = () => sessionStorage.removeItem('loginToken');
+
     return (
         <StyledNavBar>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+            {loginToken ? <Link onClick={logOut} to="/">Logout</Link> : <Link to="/login">Login</Link>}
+            {loginToken ? null : <Link to="/register" >Register</Link>}
         </StyledNavBar>
     )
 }

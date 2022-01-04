@@ -16,14 +16,14 @@ const token = sessionStorage.getItem('loginToken');
 //         }
 //     })
 // }
-export const getBlogsApi = () => {
-    axios({
-        method: 'get',
-        url: standardURL + 'Blogs',
-        headers: {
-            Authorization: 'bearer ' + token
-        }
-    }).then(data => {
-        return data;
-    }).catch(err => console.log(err))
-}
+// export const getBlogsApi = () => {
+//     axios({
+//         method: 'get',
+//         url:  'https://dev-donkey-api.herokuapp.com/api/Blogs',
+//         headers: {
+//             Authorization: 'bearer ' + token
+//         }
+//     }).then(data => {
+//         return data;
+//     }).catch(err => console.log(err))
+// }

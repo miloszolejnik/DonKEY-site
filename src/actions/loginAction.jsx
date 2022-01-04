@@ -1,9 +1,8 @@
-import { LoginAPI } from "../services/API";
 import axios from "axios";
 
 export const loginAction = (login, password) => async (dispatch) => {
 
-    const loginFetch = await axios({
+    let loginFetch = await axios({
         method: 'post',
         url: "https://dev-donkey-api.herokuapp.com/api/Accounts/login",
         data: {
@@ -15,4 +14,5 @@ export const loginAction = (login, password) => async (dispatch) => {
         type: "LOGIN",
         payload: loginFetch.data.token,
     })
+    sessionStorage.setItem('loginToken', loginFetch.data.token);
 };

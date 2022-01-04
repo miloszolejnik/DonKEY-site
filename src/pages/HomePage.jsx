@@ -1,16 +1,23 @@
 import React from 'react'
+//Styled
 import styled from 'styled-components'
+//React-Router
 import { useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+//Formik
 import { Formik } from 'formik'
 import * as Yup from 'yup';
-
+//Redux
 import { useDispatch } from 'react-redux';
+//Actions
 import { loginAction } from '../actions/loginAction';
-
+//Components
 import Login from '../components/Login'
+
 function HomePage() {
 
     const location = useLocation().pathname;
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     //Initial Form Values
@@ -21,7 +28,8 @@ function HomePage() {
 
     //OnSubmit
     const onSubmit = value => {
-        dispatch(loginAction(value.email, value.password))
+        dispatch(loginAction(value.email, value.password));
+        navigate('/');
     };
 
     //Form Validation by Yup
@@ -34,7 +42,7 @@ function HomePage() {
     })
 
     return (
-        <StyledMain>
+        <StyledContainer>
             <StyledHero>
                 <div>
                     <p>Even Donkey can make blog </p>
@@ -55,14 +63,12 @@ function HomePage() {
                     </LoginContainer>
                 </StyledBlackout>
                 : null}
-        </StyledMain>
+        </StyledContainer>
     )
 }
+const StyledContainer = styled.div`
+display: flex;
 
-const StyledMain = styled.div`
-    display: flex;
-    justify-content: center;
-    min-height: 80vh;
 `
 const StyledHero = styled.div`
     display: flex;
