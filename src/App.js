@@ -1,19 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
-import Nav from './components/Nav'
-import Main from './components/Main'
-import Footer from './components/Footer'
-
+import Home from './pages/Home'
 export default function App() {
 
     return (
-        <StyledSite>
-            <Nav />
-            <Main />
-            <Footer />
-        </StyledSite>
+        <Home />
     )
 }
-const StyledSite = styled.div`
-    overflow-x: hidden;
-`
