@@ -4,7 +4,7 @@ import donkeyLogo from '../images/donkey-logo.svg';
 function StyledLogo() {
     return (
         <StyledLogoContainer>
-            <img src={donkeyLogo} />
+            <img src={donkeyLogo} alt="DonKey Logo" />
             <h1>DonKey</h1>
         </StyledLogoContainer>
     )
