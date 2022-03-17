@@ -22,6 +22,9 @@ const StyledLogoContainer = styled.div`
         letter-spacing: 3px ;
         color: #f02547 ;
     }
+    img{
+        max-height: 64px ;
+    }
 `
 
 export default StyledLogo

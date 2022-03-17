@@ -25,7 +25,11 @@ const StyledMainContainer = styled.div`
     height: 100vh ;
     width: 100vw ;
     background: rgb(19,26,42);
-background: linear-gradient(313deg, rgba(19,26,42,1) 0%, rgba(10,13,23,1) 25%, rgba(2,2,4,1) 70%, rgba(0,0,0,1) 90%);
+    background: linear-gradient(313deg, rgba(19,26,42,1) 0%, rgba(10,13,23,1) 25%, rgba(2,2,4,1) 70%, rgba(0,0,0,1) 90%);
+    text-align: center ;
+    @media screen and (min-width: 600px){
+        align-items: end ;
+    }
 `
 const StyledContentConteiner = styled.div`
     background-color: #f8f8ff;
