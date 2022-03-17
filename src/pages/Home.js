@@ -6,13 +6,14 @@ import styled from 'styled-components';
 
 function Home() {
 
-    const [value, setValue] = useState(0);
+    // const [value, setValue] = useState(0);
 
     return (
         <StyledMainContainer>
             <StyledContentConteiner>
                 <StyledLogo />
-                {value === 0 ? <LoginForm /> : null}
+                {/* {value === 0 ? <LoginForm /> : null} */}
+                <LoginForm />
             </StyledContentConteiner>
         </StyledMainContainer>
     )
