@@ -20,8 +20,10 @@ const LoginForm = () => {
             password: '',
         },
         onSubmit: values => {
+            //Login Handler
             dispatch(loginAction(values.email, values.password)).then(
-                console.log('succes')
+                //After login part
+                console.log('You have logged successfully')
             )
         },
         validationSchema,

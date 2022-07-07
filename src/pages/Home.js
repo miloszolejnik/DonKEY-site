@@ -3,7 +3,6 @@ import StyledLogo from '../components/StyledLogo';
 import LoginForm from '../components/LoginForm';
 import styled from 'styled-components';
 
-
 function Home() {
 
     // const [value, setValue] = useState(0);
