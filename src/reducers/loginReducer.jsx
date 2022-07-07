@@ -8,7 +8,7 @@ const loginReducer = (state = initialState, action) => {
         case "LOGIN":
             return {
                 loginToken: action.payload,
-                isLoged: true,
+                isLoged: true
             }
             break
         default:

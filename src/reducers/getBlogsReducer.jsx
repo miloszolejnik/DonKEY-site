@@ -10,7 +10,7 @@ const getBlogsReducer = (state = initialState, action) => {
         case "FETCH_BLOGS":
             return {
                 names: action.payload.data.items,
-                isLoading: false,
+                isLoading: false
             }
             break
 

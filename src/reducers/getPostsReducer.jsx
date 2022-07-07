@@ -10,7 +10,7 @@ const getPostsReducer = (state = initialState, action) => {
         case 'FETCH_POST':
             return {
                 isLoading: false,
-                post: action.payload.data,
+                post: action.payload.data
             }
             break;
 
