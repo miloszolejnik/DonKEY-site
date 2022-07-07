@@ -8,15 +8,15 @@ const getPostsReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case 'FETCH_POST':
-            return {
+            return ({
                 isLoading: false,
-                post: action.payload.data
-            }
-            break;
+                post: action.payload.data,
+            })
+            break
 
         default:
-            return { ...state }
-            break;
+            return ({ ...state })
+            break
     }
 }
 
